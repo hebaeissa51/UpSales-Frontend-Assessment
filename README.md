@@ -10,13 +10,6 @@ This project is a frontend assessment task built to display a list of favorite m
 
 ---
 
-## Live Demo
-
-You can check out the live version of the application here:  
-🌐 [https://dapper-cat-243646.netlify.app/login](https://dapper-cat-243646.netlify.app/login)
-
----
-
 ## Tech Stack Used
 
 ### Frontend:

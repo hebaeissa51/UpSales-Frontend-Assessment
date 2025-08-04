@@ -13,7 +13,7 @@ import { formatDate } from '../../utils/helpers';
 function FavoritesTable() {
     const dt = useRef<DataTable<FavoritesTypes[]>>(null);
     const dispatch = useAppDispatch();
-    const { data: favoritesData } = useAppSelector((state) => state.favorites);
+    const { data: favoritesData, loading } = useAppSelector((state) => state.favorites);
     const [filters, setFilters] = useState<DataTableFilterMeta>({});
     const [globalFilterValue, setGlobalFilterValue] = useState('');
 
@@ -114,7 +114,7 @@ function FavoritesTable() {
                 rowsPerPageOptions={[5, 10, 25, 50]} tableStyle={{ minWidth: '50rem' }}
                 paginatorTemplate="RowsPerPageDropdown CurrentPageReport PrevPageLink NextPageLink"
                 currentPageReportTemplate={`{first}-{last} of {totalRecords} items`}
-                paginatorLeft={paginatorLeft} emptyMessage="No records found"
+                paginatorLeft={paginatorLeft} emptyMessage={loading ? "Loading..." : "No records found"}
                 filters={filters} header={renderHeader}
                 globalFilterFields={['title', 'type', 'director', 'budget', 'location', 'duration', 'year']}>
                 <Column field="title" header="Title"></Column>
