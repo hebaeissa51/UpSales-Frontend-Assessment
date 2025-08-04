@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .centered {
+        @apply !flex !items-center !justify-center;
+    }
+
+    .font-family {
+        font-family: "Rubik", sans-serif !important;
+    }
+
+    .custom-hover {
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.133) 0px 5px 15px;
+    }
+}
+
+@layer components {
+    .container-fluid {
+        @apply w-full px-4;
+    }
+
+    .btn {
+        @apply !font-normal !leading-normal !capitalize
+    }
+
+    .btn-primary {
+        @apply !bg-primary !border-primary !text-white hover:!text-primary hover:!bg-white
+    }
+
+    .btn-danger {
+        @apply !bg-danger !border-danger !text-white whitespace-nowrap
+    }
+
+    .btn-export {
+        @apply flex items-center justify-center w-[40px] h-[40px] rounded-[20%] text-white text-[24px] hover:custom-hover transition-all duration-[800ms] ease-in-out
+    }
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    background-color: #f4f5fa;
+    color: #211D1E;
+    overflow-x: hidden;
+    direction: ltr;
+}
+
+.p-paginator-left-content {
+    margin-left: auto;
+    margin-right: initial;
+}
+
+.p-dropdown.p-component.p-inputwrapper.p-inputwrapper-filled {
+    border: none;
+    background-color: #5E636614;
+    border-radius: 5px;
+    height: 23px;
+    padding: 0px 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+svg.p-icon.p-dropdown-trigger-icon.p-clickable {
+    width: 12px;
+}
+
+.p-icon,
+.p-dropdown .p-dropdown-trigger {
+    width: 20px;
+    height: 16px;
+}
+
+.p-paginator-left-content p,
+span.p-paginator-current,
+span.p-dropdown-label.p-inputtext {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    letter-spacing: 0.05em;
+    color: #787878;
+}

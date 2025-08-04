@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Heba Eissa",
+      "email": "heba@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "1",
+      "title": "Inception",
+      "type": "movie",
+      "director": "Nolan",
+      "budget": "120",
+      "location": "LA, Paris",
+      "duration": "148",
+      "year": "2009-12-31T22:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Breaking Bad",
+      "type": "show",
+      "director": "Gilligan",
+      "budget": "3",
+      "location": "Albuquerque",
+      "duration": "49",
+      "year": "2012-12-31T22:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Lion",
+      "type": "movie",
+      "director": "Gilligan",
+      "budget": "55",
+      "location": "USA",
+      "duration": "190",
+      "year": "2016-12-31T22:00:00.000Z"
+    }
+  ]
+}
