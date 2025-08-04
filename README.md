@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# Favorite Movies & TV Shows Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a frontend assessment task built to display a list of favorite movies and TV shows, with authentication and search features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## GitHub Repository
 
-## Expanding the ESLint configuration
+[https://github.com/hebaeissa51/UpSales-Frontend-Assessment](https://github.com/hebaeissa51/UpSales-Frontend-Assessment)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Live Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+You can check out the live version of the application here:  
+🌐 [https://dapper-cat-243646.netlify.app/login](https://dapper-cat-243646.netlify.app/login)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack Used
+
+### Frontend:
+- **React**
+- **Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **Material UI**
+- **PrimeReact**
+- **Redux Toolkit**
+- **Context API**
+- **React Hook Form**
+
+### Backend:
+- **JSON Server**
+
+---
+
+## Application Pages
+
+- `Login Page`: Users can login using predefined credentials stored in the database.
+- `Home Page`: Displays a list of favorite movies and TV shows.
+- `Not Found Page`: Handles invalid routes (404).
+
+---
+
+## Setup Instructions
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/hebaeissa51/UpSales-Frontend-Assessment.git
+cd UpSales-Frontend-Assessment
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Run the frontend:
+
+```bash
+npm run dev
+```
+
+### 4. Run the backend (JSON Server):
+
+```bash
+npm run server
+```
+
+> The backend runs on `http://localhost:3001`
+
+---
+
+## Authentication Demo
+
+Use the following credentials to log in:
+
+- **Email:** `heba@example.com`  
+- **Password:** `123456`
+
+> Authentication is verified against the `db.json` file using JSON Server.
+
+---
+
+## Database (db.json)
+
+The project includes a `db.json` file located in the root directory. It acts as a mock database for users and favorite items.
+
+---
+
+## Available Commands
+
+| Command           | Description                  |
+|-------------------|------------------------------|
+| `npm install`     | Install all dependencies     |
+| `npm run dev`     | Start the Vite frontend app  |
+| `npm run server`  | Start the JSON server backend|
+
+---
+
+## Notes
+
+- Make sure both the frontend (`npm run dev`) and backend (`npm run server`) are running simultaneously.
+- Backend must be running on port `3001` for login and data fetching to work properly.
+
+---
